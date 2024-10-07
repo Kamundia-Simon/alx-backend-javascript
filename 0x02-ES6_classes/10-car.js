@@ -5,9 +5,11 @@ export default class Car {
     this._motor = motor;
     this._color = color;
   }
+
   [cloneSymbol]() {
     return new this.constructor();
   }
+
   cloneCar() {
     return this[cloneSymbol]();
   }
